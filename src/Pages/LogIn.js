@@ -12,8 +12,8 @@ const LogIn = () => {
     const { githubLogin } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    const from = location.state?.from?.pathname || '/';
 
+    //const from = location.state?.from?.pathname || '/';
     const googleProvider = new GoogleAuthProvider();
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
@@ -46,7 +46,8 @@ const LogIn = () => {
                 console.log(user);
                 form.reset();
                 setError('');
-                navigate(from, { replace: true });
+                //navigate(from, { replace: true });
+                navigate(-1)
 
             })
             .catch(e => {

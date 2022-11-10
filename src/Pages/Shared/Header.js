@@ -82,6 +82,7 @@ const Header = () => {
                                         <>
                                             <img src={user?.photoURL} alt="" className='w-8 h-8 rounded-lg inline' />
                                             <span className='px-2'>{user?.displayName}  </span>
+                                            <span><Link to='/my-review'>My Reviews</Link>  </span>
                                             <button onClick={handleLogOut} className="btn btn-outline btn-accent">Log Out</button>
                                         </>
                                         :
@@ -187,6 +188,7 @@ const Header = () => {
                                                 </Link>
                                             </li>
 
+
                                             <li>
                                                 <Link
                                                     class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -196,7 +198,9 @@ const Header = () => {
                                                             <>
                                                                 <img src={user?.photoURL} alt="" className='w-8 h-8 rounded-lg inline' />
                                                                 <span className='px-2'>{user?.displayName}  </span>
+                                                                <span><Link to='/my-reviews'>My Reviews</Link>  </span>
                                                                 <button onClick={handleLogOut} className="btn btn-outline btn-accent">Log Out</button>
+
                                                             </>
                                                             :
                                                             <>
