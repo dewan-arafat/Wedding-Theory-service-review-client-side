@@ -6,6 +6,7 @@ import ServicesDetails from "../Pages/ServicesDetails";
 import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import MyReview from "../Pages/MyReview";
+import PrivateRouter from "./PrivateRouter/PrivateRouter";
 
 export const router = createBrowserRouter([
     {
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/my-review',
-                element: <MyReview></MyReview>
+                element: <PrivateRouter><MyReview></MyReview></PrivateRouter>
             }
         ]
     }

@@ -46,7 +46,7 @@ const Header = () => {
                         >
 
                             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                Bridal Theory
+                                Wedding Theory
                             </span>
                         </Link>
                         <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -145,7 +145,7 @@ const Header = () => {
                                                 class="inline-flex items-center"
                                             >
                                                 <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                    Bridal Theory
+                                                    Wedding Theory
                                                 </span>
                                             </a>
                                         </div>
@@ -198,7 +198,7 @@ const Header = () => {
                                                             <>
                                                                 <img src={user?.photoURL} alt="" className='w-8 h-8 rounded-lg inline' />
                                                                 <span className='px-2'>{user?.displayName}  </span>
-                                                                <span><Link to='/my-reviews'>My Reviews</Link>  </span>
+                                                                <span><Link to='/my-review'>My Reviews</Link>  </span>
                                                                 <button onClick={handleLogOut} className="btn btn-outline btn-accent">Log Out</button>
 
                                                             </>

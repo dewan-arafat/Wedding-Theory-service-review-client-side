@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider/AuthProvider';
 import FeatureList from './FeatureList';
+import ServiceReviews from './ServiceReviews';
 
 
 
@@ -12,14 +13,14 @@ const ServicesDetails = () => {
     const { img, service_id, title, _id, description, price, facility } = service;
     console.log(service);
 
-    // const [reviews, setReviews] = useState({})
-    // const url = `http://localhost:5000/reviews?service=${_id}`;
-    // useEffect(() => {
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => setReviews(data))
-    // }, [])
-    // console.log(reviews);
+    const [reviews, setReviews] = useState([])
+    const url = `http://localhost:5000/reviews?service=${_id}`;
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
+    console.log(reviews);
 
 
     const handleSubmitReview = event => {
@@ -61,9 +62,9 @@ const ServicesDetails = () => {
 
 
     return (
-        <div>
+        <div className='mt-24 px-10'>
 
-            <div className='bg-gray-200 p-6 rounded shadow-lg'>
+            <div className='bg-gray-200 lg:w-3/6 h-2/5 mx-auto p-6 rounded shadow-lg'>
                 <img
                     className='object-fit w-full h-96 mb-6 rounded shadow-lg md:h-3/4 lg:h-80 xl:h-80'
                     src={img}
@@ -85,20 +86,20 @@ const ServicesDetails = () => {
 
             <div>
 
-                <div>
-                    <h1>Review</h1>
+                <div className='pt-6'>
+                    <h1 className='text-center text-3xl text-bold'>Service Review</h1>
                 </div>
                 <div>
-                    {/* {
+                    {
                         reviews.map(s_review => <ServiceReviews s_review={s_review}></ServiceReviews>)
-                    } */}
+                    }
 
 
                 </div>
             </div>
 
-            <div className='w-3/4 mx-auto'>
-                <h1>wwwwww</h1>
+            <div className='lg:w-3/6 mx-auto pt-10'>
+                <h1 className='text-center text-xl text-bold'>Your opinion matters to us. Please give your review</h1>
                 <form onSubmit={handleSubmitReview} className="card-body">
                     <div className="form-control">
                         <label className="label">
