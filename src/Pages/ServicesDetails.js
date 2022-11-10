@@ -20,7 +20,7 @@ const ServicesDetails = () => {
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
-    console.log(reviews);
+
 
 
     const handleSubmitReview = event => {
@@ -30,7 +30,7 @@ const ServicesDetails = () => {
         const email = user?.email || 'unregistered';
         const message = form.textarea.value;
         const photo = user?.photoURL
-        console.log(name)
+
         const review =
         {
             service: _id,
