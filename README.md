@@ -8,7 +8,7 @@ A photography service providing website
 -Dynamic details page for each services.
 
 ## Live Link
-Hosted in Netlify -> [Wedding Theory](https://wedding-theory.web.app//)
+Hosted in Firebase -> [Wedding Theory](https://wedding-theory.web.app//)
 
 
 ## Context API
